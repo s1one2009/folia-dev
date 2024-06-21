@@ -25,9 +25,9 @@ jobs:
       - name: Configure Git User Details
         run: git config --global user.email "actions@github.com" && git config --global user.name "Github Actions"
       - name: Apply Patches
-        run: gradlew.bat applyPatches
+        run: ./gradlew.bat applyPatches
       - name: Build
-        run: gradlew.bat build
+        run: ./gradlew.bat build
       - name: Save as artifacts
         uses: actions/upload-artifact@v4
         with:
